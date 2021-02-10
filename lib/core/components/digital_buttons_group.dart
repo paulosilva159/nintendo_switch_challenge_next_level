@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:nintendo_swt/core/colors/colors.dart';
 
-import 'small_roudend_button.dart';
+import 'buttons/small_roudend_button.dart';
 
-class ButtonsQuadra extends StatelessWidget {
-  const ButtonsQuadra({
+class DigitalButtonsGroup extends StatelessWidget {
+  const DigitalButtonsGroup({
     @required this.type,
-    @required this.size,
+    @required this.height,
   })  : assert(type != null),
-        assert(size != null);
+        assert(height != null);
 
-  final ButtonsQuadraType type;
-  final Size size;
+  final ButtonsGroupType type;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height,
-      width: size.width,
+      height: height,
+      width: height,
       child: Stack(
         children: [
           Align(
             alignment: Alignment.topCenter,
             child: SmallRoundedButton(
-              height: size.height / 5.5,
+              height: height / 3,
               type: type,
-              icon: type == ButtonsQuadraType.directional
+              icon: type == ButtonsGroupType.directional
                   ? Icon(
                       Icons.arrow_drop_up,
                       color: AppColors.digitalDirectionTopLayer2Bottom,
@@ -44,9 +44,9 @@ class ButtonsQuadra extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: SmallRoundedButton(
-              height: size.height / 5.5,
+              height: height / 3,
               type: type,
-              icon: type == ButtonsQuadraType.directional
+              icon: type == ButtonsGroupType.directional
                   ? Icon(
                       Icons.arrow_left,
                       color: AppColors.digitalDirectionLeftLayer2Bottom,
@@ -65,9 +65,9 @@ class ButtonsQuadra extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: SmallRoundedButton(
-              height: size.height / 5.5,
+              height: height / 3,
               type: type,
-              icon: type == ButtonsQuadraType.directional
+              icon: type == ButtonsGroupType.directional
                   ? Icon(
                       Icons.arrow_right,
                       color: AppColors.digitalDirectionRightLayer2Bottom,
@@ -86,9 +86,9 @@ class ButtonsQuadra extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: SmallRoundedButton(
-              height: size.height / 5.5,
+              height: height / 3,
               type: type,
-              icon: type == ButtonsQuadraType.directional
+              icon: type == ButtonsGroupType.directional
                   ? Icon(
                       Icons.arrow_drop_down,
                       color: AppColors.digitalDirectionBottomLayer2Bottom,
@@ -110,7 +110,7 @@ class ButtonsQuadra extends StatelessWidget {
   }
 }
 
-enum ButtonsQuadraType {
+enum ButtonsGroupType {
   directional,
   action,
 }

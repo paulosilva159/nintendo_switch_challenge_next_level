@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nintendo_swt/core/colors/colors.dart';
 
-import 'buttons_quadra.dart';
+import '../digital_buttons_group.dart';
 
 class SmallRoundedButton extends StatelessWidget {
   SmallRoundedButton({
@@ -12,16 +12,16 @@ class SmallRoundedButton extends StatelessWidget {
         assert(type != null),
         assert(height != null);
 
+  final ButtonsGroupType type;
   final Widget icon;
-  final ButtonsQuadraType type;
   final double height;
 
   @override
   Widget build(BuildContext context) {
-    final _layer0Size = Size.fromRadius(height);
-    final _layer1Size = Size.fromRadius(height * 4 / 5);
+    final _layer0Size = Size.fromRadius(height / 2);
+    final _layer1Size = Size.fromRadius(height * 4 / 10);
 
-    final isDirectionalButtons = type == ButtonsQuadraType.directional;
+    final isDirectionalButtons = type == ButtonsGroupType.directional;
 
     return Stack(
       alignment: Alignment.center,

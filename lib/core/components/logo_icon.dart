@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:nintendo_swt/core/components/clippers/logo_clipper.dart';
 
 class LogoView extends StatelessWidget {
-  const LogoView({
-    @required this.color,
-    @required this.height,
-  })  : assert(height != null),
+  const LogoView({@required this.width, @required this.color})
+      : assert(width != null),
         assert(color != null);
 
-  final double height;
+  final double width;
   final Color color;
 
   @override
@@ -17,11 +15,11 @@ class LogoView extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         Container(
-          width: height,
-          height: height * 2,
+          width: width,
+          height: width * 2,
           child: ClipPath(
             clipper: LogoLeftPadClipper(
-              customSize: Size(height, height * 2),
+              customSize: Size(width, width * 2),
             ),
             child: Container(
               color: color,
@@ -29,14 +27,14 @@ class LogoView extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: height / 4,
+          width: width / 4,
         ),
         Container(
-          width: height,
-          height: height * 2,
+          width: width,
+          height: width * 2,
           child: ClipPath(
             clipper: LogoRightPadClipper(
-              customSize: Size(height, height * 2),
+              customSize: Size(width, width * 2),
             ),
             child: Container(
               color: color,

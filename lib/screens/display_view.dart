@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../core/colors/colors.dart';
-import 'logo_view.dart';
+import '../core/components/animated_logo.dart';
 
 class DisplayView extends StatelessWidget {
+  const DisplayView({@required this.orientation}) : assert(orientation != null);
+
+  final Orientation orientation;
+
   @override
   Widget build(BuildContext context) {
+    final isVerticalView = orientation == Orientation.portrait;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
       child: Container(
@@ -15,9 +21,9 @@ class DisplayView extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: AppColors.screen,
         ),
-        child: LogoView(
+        child: AnimatedLogo(
           color: AppColors.bigLogo,
-          height: MediaQuery.of(context).size.height * 1.5 / 16,
+          width: MediaQuery.of(context).size.width / (isVerticalView ? 10 : 16),
         ),
       ),
     );

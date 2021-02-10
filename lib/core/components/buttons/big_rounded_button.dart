@@ -8,50 +8,48 @@ class BigRoundedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _layer0Size = Size.fromRadius(height);
-    final _layer1Size = Size.fromRadius(height * 4 / 5);
-    final _layer2Size = Size.fromRadius(height * 3.5 / 5);
+    final _layer0Size = Size.fromRadius(height / 2);
+    final _layer1Size = Size.fromRadius(height * 4 / 10);
+    final _layer2Size = Size.fromRadius(height * 3.5 / 10);
 
-    return Stack(
+    return Container(
       alignment: Alignment.center,
-      children: [
-        Container(
-          height: _layer0Size.height,
-          width: _layer0Size.width,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: AppColors.bigButtonLayerBorder,
-            ),
-            shape: BoxShape.circle,
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                AppColors.bigButtonLayer0Top,
-                AppColors.bigButtonLayer0Bottom,
-              ],
-            ),
+      height: _layer0Size.height,
+      width: _layer0Size.width,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: AppColors.bigButtonLayerBorder,
+        ),
+        shape: BoxShape.circle,
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[
+            AppColors.bigButtonLayer0Top,
+            AppColors.bigButtonLayer0Bottom,
+          ],
+        ),
+      ),
+      child: Container(
+        alignment: Alignment.center,
+        height: _layer1Size.height,
+        width: _layer1Size.width,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppColors.bigButtonLayerBorder,
+          ),
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[
+              AppColors.bigButtonLayer1Top,
+              AppColors.bigButtonLayer1Bottom,
+            ],
           ),
         ),
-        Container(
-          height: _layer1Size.height,
-          width: _layer1Size.width,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: AppColors.bigButtonLayerBorder,
-            ),
-            shape: BoxShape.circle,
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: <Color>[
-                AppColors.bigButtonLayer1Top,
-                AppColors.bigButtonLayer1Bottom,
-              ],
-            ),
-          ),
-        ),
-        Container(
+        child: Container(
+          alignment: Alignment.center,
           height: _layer2Size.height,
           width: _layer2Size.width,
           decoration: BoxDecoration(
@@ -69,7 +67,7 @@ class BigRoundedButton extends StatelessWidget {
             ),
           ),
         ),
-      ],
+      ),
     );
   }
 }
