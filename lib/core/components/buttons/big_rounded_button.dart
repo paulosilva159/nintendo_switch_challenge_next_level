@@ -21,7 +21,7 @@ class BigRoundedButton extends StatelessWidget {
           color: AppColors.bigButtonLayerBorder,
         ),
         shape: BoxShape.circle,
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: <Color>[
@@ -39,7 +39,7 @@ class BigRoundedButton extends StatelessWidget {
             color: AppColors.bigButtonLayerBorder,
           ),
           shape: BoxShape.circle,
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: <Color>[
@@ -57,7 +57,7 @@ class BigRoundedButton extends StatelessWidget {
               color: AppColors.bigButtonLayerBorder,
             ),
             shape: BoxShape.circle,
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: <Color>[

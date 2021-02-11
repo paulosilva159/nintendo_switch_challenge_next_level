@@ -9,7 +9,7 @@ class LampGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _size = Size.fromRadius(4);
+    const _size = Size.fromRadius(4);
 
     return Container(
       height: 44,
@@ -27,7 +27,7 @@ class LampGroup extends StatelessWidget {
           Container(
             height: _size.height,
             width: _size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.lampOff,
               shape: BoxShape.circle,
             ),
@@ -35,7 +35,7 @@ class LampGroup extends StatelessWidget {
           Container(
             height: _size.height,
             width: _size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.lampOff,
               shape: BoxShape.circle,
             ),
@@ -43,7 +43,7 @@ class LampGroup extends StatelessWidget {
           Container(
             height: _size.height,
             width: _size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.lampOff,
               shape: BoxShape.circle,
             ),

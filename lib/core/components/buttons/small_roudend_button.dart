@@ -4,7 +4,7 @@ import 'package:nintendo_swt/core/colors/colors.dart';
 import '../digital_buttons_group.dart';
 
 class SmallRoundedButton extends StatelessWidget {
-  SmallRoundedButton({
+  const SmallRoundedButton({
     @required this.icon,
     @required this.type,
     @required this.height,
@@ -35,12 +35,14 @@ class SmallRoundedButton extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: <Color>[
-                isDirectionalButtons
-                    ? AppColors.digitalDirectionBottomLayer0Top
-                    : AppColors.actionButtonBottomLayer0Top,
-                isDirectionalButtons
-                    ? AppColors.digitalDirectionBottomLayer0Bottom
-                    : AppColors.actionButtonBottomLayer0Bottom,
+                if (isDirectionalButtons)
+                  AppColors.digitalDirectionBottomLayer0Top
+                else
+                  AppColors.actionButtonBottomLayer0Top,
+                if (isDirectionalButtons)
+                  AppColors.digitalDirectionBottomLayer0Bottom
+                else
+                  AppColors.actionButtonBottomLayer0Bottom,
               ],
             ),
           ),
@@ -54,12 +56,14 @@ class SmallRoundedButton extends StatelessWidget {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: <Color>[
-                isDirectionalButtons
-                    ? AppColors.digitalDirectionBottomLayer1Top
-                    : AppColors.actionButtonBottomLayer1Top,
-                isDirectionalButtons
-                    ? AppColors.digitalDirectionBottomLayer1Bottom
-                    : AppColors.actionButtonBottomLayer1Bottom,
+                if (isDirectionalButtons)
+                  AppColors.digitalDirectionBottomLayer1Top
+                else
+                  AppColors.actionButtonBottomLayer1Top,
+                if (isDirectionalButtons)
+                  AppColors.digitalDirectionBottomLayer1Bottom
+                else
+                  AppColors.actionButtonBottomLayer1Bottom,
               ],
             ),
           ),

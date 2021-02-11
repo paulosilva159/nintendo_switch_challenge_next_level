@@ -5,22 +5,20 @@ import 'package:nintendo_swt/core/components/logo_icon.dart';
 
 class InBetweenPadsView extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return Row(
+  Widget build(BuildContext context) => Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        LampGroup(
+        const LampGroup(
           isFirstLampOn: true,
         ),
-        LogoView(
+        LogoIcon(
           color: AppColors.smallLogo,
           width: MediaQuery.of(context).size.height * 2.5 / 64,
         ),
-        LampGroup(
+        const LampGroup(
           isFirstLampOn: false,
         ),
       ],
     );
-  }
 }

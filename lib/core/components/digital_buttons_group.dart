@@ -14,8 +14,7 @@ class DigitalButtonsGroup extends StatelessWidget {
   final double height;
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  Widget build(BuildContext context) => Container(
       height: height,
       width: height,
       child: Stack(
@@ -26,11 +25,11 @@ class DigitalButtonsGroup extends StatelessWidget {
               height: height / 3,
               type: type,
               icon: type == ButtonsGroupType.directional
-                  ? Icon(
+                  ? const Icon(
                       Icons.arrow_drop_up,
                       color: AppColors.digitalDirectionTopLayer2Bottom,
                     )
-                  : Center(
+                  : const Center(
                       child: Text(
                         'X',
                         style: TextStyle(
@@ -47,11 +46,11 @@ class DigitalButtonsGroup extends StatelessWidget {
               height: height / 3,
               type: type,
               icon: type == ButtonsGroupType.directional
-                  ? Icon(
+                  ? const Icon(
                       Icons.arrow_left,
                       color: AppColors.digitalDirectionLeftLayer2Bottom,
                     )
-                  : Center(
+                  : const Center(
                       child: Text(
                         'Y',
                         style: TextStyle(
@@ -68,11 +67,11 @@ class DigitalButtonsGroup extends StatelessWidget {
               height: height / 3,
               type: type,
               icon: type == ButtonsGroupType.directional
-                  ? Icon(
+                  ? const Icon(
                       Icons.arrow_right,
                       color: AppColors.digitalDirectionRightLayer2Bottom,
                     )
-                  : Center(
+                  : const Center(
                       child: Text(
                         'A',
                         style: TextStyle(
@@ -89,11 +88,11 @@ class DigitalButtonsGroup extends StatelessWidget {
               height: height / 3,
               type: type,
               icon: type == ButtonsGroupType.directional
-                  ? Icon(
+                  ? const Icon(
                       Icons.arrow_drop_down,
                       color: AppColors.digitalDirectionBottomLayer2Bottom,
                     )
-                  : Center(
+                  : const Center(
                       child: Text(
                         'B',
                         style: TextStyle(
@@ -107,7 +106,6 @@ class DigitalButtonsGroup extends StatelessWidget {
         ],
       ),
     );
-  }
 }
 
 enum ButtonsGroupType {

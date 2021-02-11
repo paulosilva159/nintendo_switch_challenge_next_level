@@ -20,7 +20,7 @@ class SoundButton extends StatelessWidget {
           Container(
             height: _layer0Size.height,
             width: _layer0Size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -34,7 +34,7 @@ class SoundButton extends StatelessWidget {
           Container(
             height: _layer1Size.height,
             width: _layer1Size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -48,7 +48,7 @@ class SoundButton extends StatelessWidget {
           Container(
             height: _layer2Size.height,
             width: _layer2Size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: AppColors.soundLayer2,
             ),

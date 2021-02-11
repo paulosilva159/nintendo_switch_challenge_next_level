@@ -35,7 +35,7 @@ class HomeButton extends StatelessWidget {
                 ),
                 shape: BoxShape.circle,
                 color: AppColors.homeLayer1Top),
-            child: Center(
+            child: const Center(
               child: Icon(Icons.home),
             ),
           ),

@@ -8,29 +8,27 @@ class PlusButton extends StatelessWidget {
   final double height;
 
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 16),
-      child: Container(
-        height: height,
-        width: height,
-        child: ClipPath(
-          clipper: PlusButtonClipper(),
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.plusButtomBorder),
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  AppColors.plusButtomTop,
-                  AppColors.plusButtomBottom,
-                ],
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(right: 16),
+        child: Container(
+          height: height,
+          width: height,
+          child: ClipPath(
+            clipper: PlusButtonClipper(),
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.plusButtomBorder),
+                gradient: const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    AppColors.plusButtomTop,
+                    AppColors.plusButtomBottom,
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
-    );
-  }
+      );
 }

@@ -12,12 +12,10 @@ class NintendoScreen extends StatefulWidget {
 
 class _NintendoScreenState extends State<NintendoScreen> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  Widget build(BuildContext context) => Scaffold(
       body: OrientationBuilder(
-        builder: (context, orientation) {
-          return Container(
-            decoration: BoxDecoration(
+        builder: (context, orientation) => Container(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -30,11 +28,9 @@ class _NintendoScreenState extends State<NintendoScreen> {
             child: orientation == Orientation.portrait
                 ? NintendoScreenPortraitView()
                 : NintendoScreenLandscapeView(),
-          );
-        },
+          ),
       ),
     );
-  }
 }
 
 class NintendoScreenLandscapeView extends StatelessWidget {

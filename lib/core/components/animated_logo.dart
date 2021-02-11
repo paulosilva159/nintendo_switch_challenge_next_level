@@ -24,7 +24,7 @@ class _AnimatedLogoState extends State<AnimatedLogo>
   void initState() {
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
     );
     final _curvedAnimation =
         CurvedAnimation(parent: _animationController, curve: Curves.easeIn);
@@ -39,12 +39,9 @@ class _AnimatedLogoState extends State<AnimatedLogo>
   }
 
   @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _animation,
-      builder: (context, _) {
-        return LogoView(width: _animation.value, color: widget.color);
-      },
-    );
-  }
+  Widget build(BuildContext context) => AnimatedBuilder(
+        animation: _animation,
+        builder: (context, _) =>
+            LogoIcon(width: _animation.value, color: widget.color),
+      );
 }
