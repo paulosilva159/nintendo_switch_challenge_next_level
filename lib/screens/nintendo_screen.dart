@@ -3,7 +3,8 @@ import 'package:nintendo_swt/core/colors/colors.dart';
 import 'package:nintendo_swt/core/components/joy_pads/left_joy_pad.dart';
 import 'package:nintendo_swt/core/components/joy_pads/right_joy_pad.dart';
 import 'package:nintendo_swt/screens/display_view.dart';
-import 'package:nintendo_swt/screens/in_between_pads_view.dart';
+
+import 'file:///D:/Projetos/Flutter/nintendo_switch_challenge_next_level/lib/core/components/in_between_pads.dart';
 
 class NintendoScreen extends StatefulWidget {
   @override
@@ -13,8 +14,8 @@ class NintendoScreen extends StatefulWidget {
 class _NintendoScreenState extends State<NintendoScreen> {
   @override
   Widget build(BuildContext context) => Scaffold(
-      body: OrientationBuilder(
-        builder: (context, orientation) => Container(
+        body: OrientationBuilder(
+          builder: (context, orientation) => Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -29,8 +30,8 @@ class _NintendoScreenState extends State<NintendoScreen> {
                 ? NintendoScreenPortraitView()
                 : NintendoScreenLandscapeView(),
           ),
-      ),
-    );
+        ),
+      );
 }
 
 class NintendoScreenLandscapeView extends StatelessWidget {
@@ -94,7 +95,7 @@ class NintendoScreenPortraitView extends StatelessWidget {
                 orientation: orientation,
               ),
               Expanded(
-                child: InBetweenPadsView(),
+                child: InBetweenPads(),
               ),
               RightJoyPadView(
                 joyPadWidth: joyPadWidth,

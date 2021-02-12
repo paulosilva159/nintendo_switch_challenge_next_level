@@ -4,7 +4,8 @@ class PlusButtonClipper extends CustomClipper<Path> {
   final edgeSize = 8.0;
 
   @override
-  Path getClip(Size size) => Path()..moveTo(0, edgeSize)
+  Path getClip(Size size) => Path()
+    ..moveTo(0, edgeSize)
     ..lineTo(0, edgeSize * 2)
     ..lineTo(edgeSize, edgeSize * 2)
     ..lineTo(edgeSize, edgeSize * 3)

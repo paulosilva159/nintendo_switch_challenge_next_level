@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nintendo_swt/core/colors/colors.dart';
 
@@ -13,6 +14,7 @@ class BigRoundedButton extends StatelessWidget {
     final _layer2Size = Size.fromRadius(height * 3.5 / 10);
 
     return Container(
+      constraints: BoxConstraints(maxHeight: height),
       alignment: Alignment.center,
       height: _layer0Size.height,
       width: _layer0Size.width,
